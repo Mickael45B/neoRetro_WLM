@@ -1,0 +1,285 @@
+    
+    a {
+        color: #0088e4;
+    }
+    
+    .P2_main {
+        display: flex;
+        height: auto;
+        min-height: 306px;
+        padding: 10px;
+    
+        justify-content: center;
+    
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        overflow:hidden;
+    }
+    
+    .P2_mainwindow {
+        background-color: #ECF6F9;
+        border: thin solid #707070;
+        border-radius: 8px;
+    
+        box-shadow: 0 0 5px #00000050;
+    }
+    
+    .P2_aerobutton {
+        background-color: transparent;
+        border: 2px solid transparent;
+        width: auto;
+    }
+    .P2_aerobutton:hover {
+        border-image: url("icones/aerobutton_border.png") 2 round;
+    }
+    .P2_aerobutton:active {
+        border-image: url("icones/aerobutton_border_down.png") 2 round;
+    }
+    
+    .P2_emoticon {
+        margin: 0 3px;
+    }
+    
+    .smallarrowbtn {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        align-items: center;
+    }
+    .P2_arrowdown {
+        height: 5px;
+        margin-left: 4px;
+    }
+    
+    .alerts {
+        display: flex;
+        align-items: center;
+        height: 19px;
+        background-color: white;
+        border: thin solid #bed6e0;
+        border-bottom: none;
+    }
+        .alerttext {
+        margin: 0; margin-left: 3px; 
+        }
+        
+    #P2_contacts {
+        background-color: white;
+        float: left;
+        width: 30%;
+        min-width: 274px;
+        height: 100%;
+        position: relative;
+    }
+    
+        #P2_contacts .P2_header {
+            background-image: url("frames/msgres_fullheader2.png");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height: 95px;
+            width: 100%;
+        }
+            .P2_titlebar {
+                padding: 6px;
+                padding-bottom: 5px;
+                height: 28px;
+                display: flex;
+                flex-direction: row;
+                height: fit-content;
+            }
+                #P2_title {
+                    height: 10px;
+                    margin-top: 4px;
+                    margin-left: 4px;
+                }
+    
+        .P2_user-info {
+            display: flex;
+            height: 69px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px 14px;
+        }
+            #P2_frame {
+                height: 62px;
+                width: auto;
+                position: absolute;
+                top: 31px;
+                left: 9px;
+            }
+            #P2_avatar {
+                height: 48px;
+                width: auto;
+                border-radius: 2px;
+            }
+    
+        .P2_profile {
+            margin: auto;
+            margin-left: 14px;
+            margin-top: 3px;
+            height: 100%
+        }
+            #P2_user {
+                padding: 0;
+                height: fit-content;
+                display: flex;
+                text-align: start;
+                align-items: center;
+            }
+                #P2_user > h3 {
+                    font-size: 10pt;
+                    font-weight: 600;
+                    color: white;
+                    margin: 0;
+                }
+                #P2_status {
+                    margin: 0;
+                    font-size: 8pt;
+                    color: #B9DDE7;
+                    margin-left: 8px;
+                }
+    
+            #P2_message {
+                padding: 0;
+                margin: 0;
+                height: fit-content;
+                display: flex;
+                text-align: start;
+                align-items: center;
+    
+                color: #B9DDE7;
+                padding-top: 2px;
+                padding-bottom: 3px;
+                font-size: 8pt;
+            }
+            .P2_arrowcontacts {
+                margin-left: 8px;
+                fill: #B9DDE7 !important;
+            }
+    
+        #P2_contactsnav {
+            background-image: url("frames/msgres_navbar.png");
+            background-size:100% 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            height: 31px;
+            padding: 0;
+            box-shadow: 0px 1px 2px #00000077;
+        }
+            .iconbar {
+                list-style: none;
+                width: 50%;
+                margin: 0;
+                padding: 3px 8px 2px 8px;
+            }
+                .P2_contactaction {
+                    height: 25px;
+                    width: 28px;
+                    margin: 0 2px;
+                    marker: none;
+                }
+                    #P2_left > .P2_contactaction {
+                        float: left;
+                    }
+                    #right > .P2_contactaction {
+                        float: right;
+                    }
+    
+        .P2_search {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            height: 38px;
+            padding: 8px 8px 8px 7px;
+    
+            border-bottom: thin solid #e2eaf3;
+        }
+            #P2_contact-search {
+                font-size: 8pt;
+                height: 23px;
+                width: 100%;
+                padding: 8px;
+                margin-right: 7px;
+                
+                border: thin solid #c7c7c7;
+                box-shadow: inset 0 0 3px #0000002a;
+            }
+            #P2_contact-search:focus {
+                border: thin solid #52c9fd;
+                box-shadow: 0 0 6px #52cafdbe;
+            }
+    
+            .P2_searchbar-btn {
+                height: 23px;
+                width: 22px;
+                border: 2px solid transparent;
+            }
+            .P2_searchbar-btn:hover {
+                border-image: url("icones/button_border.png") 2 round;
+            }
+            .P2_searchbar-btn:active {
+                border-image: url("icones/button_border_down.png") 2 round;
+            }
+    
+    
+            .P2_listitem {
+                border: none;
+                font-size: 8pt;
+                text-align: start;
+                height: 19px;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background-color: white;
+            }
+            .P2_listitem:focus {
+                background-color: #1c8dc5;
+            }
+                .arrow {
+                    width: 9px;
+                    height: 9px;
+                    margin-right: 2px;
+                    background: url("icones/arrows.png") 0 0;
+                }
+    
+                .P2_contact {
+                    padding-left: 19px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                    .P2_status-icon {
+                        height: 100%;
+                        box-sizing: content-box;
+                    }
+                    .P2_contact-text {
+                        margin: 0;
+                        text-anchor: middle;
+                        display: inline-block;
+                        
+                        text-overflow: ellipsis;
+                    }
+                    .P2_message {
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+    
+        #P2_footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 5px 10px;
+            background-color: #ECF6F9;
+            border-radius: 0 0 8px 8px;
+            border-top: thin solid #BED6E0;
+        }
+            #P2_ad {
+                display: block;
+                margin: 10px auto;
+            }
+  /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */          
