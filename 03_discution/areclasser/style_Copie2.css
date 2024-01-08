@@ -1,0 +1,866 @@
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+
+:root{ /* variable pour utilisation dans ce document */
+  --borderRadius: 6px;
+  --largeurCadre:475px;
+}
+
+
+/* 1 -> Ensemble de la page */
+
+  body {            /* 1.1 Arriere plan */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background-image: url(labyrintheBrique.jpg);
+      background-size: cover;
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+
+  .containerprinc { /* 1.3 contenu a afficher */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      margin: 25vh auto;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+/* 1 <- Ensemble de la page */
+
+
+/* 2 -> contenu de la fenetre de discution */
+  .msn-messenger-window>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: relative;
+      display: grid;
+      /*overflow: hidden;*/
+    /* AFFCHAGE */
+    /* TAILLE */
+      width:475px;                    
+      height:400px;                  
+      grid-template-rows: 60px 1fr 140px 24px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */  
+      background: #D7E4F5 url(main-background.png) bottom 20px right no-repeat;
+    /* BORDURE */
+      border-radius:var(--borderRadius);
+      box-shadow:
+      2px 2px 5px #0009,
+      5px 5px 10px #000c;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */  
+      transform: translate(var(--x, 0), var(--y, 0)); 
+    /* AUTRES */
+  }
+
+  .msn-messenger-window>.container .border-window {  /* 2.2 bordure du cadre */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    /* AFFCHAGE */
+    /* TAILLE */
+      width: 100%;
+      height: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background-image:
+        url(main-corner-left.png),
+        url(main-corner-right.png),
+        url(main-left.png),
+        url(main-right.png),
+        url(main-bottom.png);
+      background-repeat: no-repeat, no-repeat, repeat-y, repeat-y, repeat-x;
+      background-position: bottom left, bottom -1px right, bottom left, bottom right, bottom;
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+      clip-path: polygon(0 14.5%, 100% 5%, 100% 100%, 0 100%);
+    /* AUTRES */
+      pointer-events: none;
+    }
+/* 2 <- contenu de la fenetre de discution */
+
+
+/* 3 -> barre de menu */
+  .msn-messenger-toolbar>.container { /* ensemble barre de menu */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */ 
+      position: relative;
+      display: grid;
+    /* TAILLE */
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 310px 1fr;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */   
+  }
+
+  .toolbar-container { /* partie gauche des menus */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: grid;  
+      align-items: center;
+    /* TAILLE */ 
+      grid-template-columns: 40px 56px 44px 40px 54px 44px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: url(toolbar-background.png) repeat;
+      background-size: contain;
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      justify-content: flex-end;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .up-down {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: absolute;
+      top: 2px;
+      left: 2px;
+    /* TAILLE */
+      --image-size: 15px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .toolbar-small-container { /* ensemble de la partie droite des menus */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: grid;
+    /* TAILLE */  
+      grid-template-columns: 50px 50px 37px 28px; 
+      height: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */   
+  }
+
+    .toolbar-small-container .left {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */ 
+        background: url(small-toolbar-left-background.png) no-repeat;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */     
+    }
+
+    .toolbar-small-container .center {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background:
+          url(msn-logo.png) top left 4px,
+          url(small-toolbar-center-background.png);
+        background-repeat: no-repeat, repeat-x;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .toolbar-small-container .right {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(small-toolbar-right-background.png) no-repeat;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .toolbar-small-container .end {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(small-toolbar-end-background.png) repeat;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+  .center .buttons {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      gap: 0 4px;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+      transform: translate(2px, 23px);
+    /* AUTRES */
+  }
+  
+  .center .image-circular-button {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      --size: 19px;
+      --image-size: 13px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .image-button .container { /* chaque icone de la barre de menu */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .image-button .container .text {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      font-family: Verdana;
+      font-size: 10.5px;
+      letter-spacing: -0.25px;
+      color: #434C4B;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .image-button .container .text span {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      text-decoration: underline;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */   
+  }
+
+  .image-circular-button>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    /* TAILLE */
+      width: var(--size, 16px);
+      height: var(--size, 16px);
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: url(small-circle-button.png) no-repeat;
+      background-size: cover;
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */    
+  }
+
+  .image-circular-button>.container img {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      width: var(--image-size, 11px);
+      height: var(--image-size, 11px);
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+/* 3 <- barre de menu */
+
+
+/* 4 -> destinataire */
+
+
+
+  .msn-messenger-remote-user>.container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;
+      /* TAILLE */
+        width: 100%*var(--largeurCadre);
+        height: 92%;
+
+        grid-template-columns: 1fr 140px;
+      /* MARGE INT./EXT. */
+        margin: 4px 8px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */  
+  }
+
+
+  
+  .msn-messenger-history-chat>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: grid;
+      justify-content: center;
+    /* TAILLE */
+      width: 97%;
+      height: 100%;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: 28px 1fr;
+    /* MARGE INT./EXT. */
+      margin: 2px 1px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border: 1px solid #586170;
+      border-radius: 8px 8px 0 0;
+    /* POLICE/CONTENU */
+      font-family: Verdana;
+      font-size: 10px;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */    
+  }
+
+  .msn-messenger-history-chat .container .subject {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      align-items: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      padding-left: 6px;
+    /* ARRIERE PLAN */
+      background: #EEF0FD;
+    /* BORDURE */
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid #586170;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+    
+  }
+
+  .msn-messenger-history-chat .container .subject strong {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      padding-left: 3px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .msn-messenger-history-chat .container .history {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: #fff;
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */   
+  }
+/* 4 <- destinataire */
+
+
+/* 5 -> Avatar */
+.msn-messenger-avatar .container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: relative;    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    /* TAILLE */
+      width: 114px;
+      height: 114px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border: 1px solid #586170;
+      border-radius: 8px;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .msn-messenger-avatar .container .picture {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      width: 96px;
+      height: 96px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border: 1px solid #586170;
+      border-radius: 8px;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+      transform: translateY(4px);
+    /* AUTRES */  
+  }
+
+  .msn-messenger-avatar .container .down { /* fleche bas en dessous de l'avater */
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      align-self: flex-end;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: transparent;
+    /* BORDURE */
+      border: 0;
+    /* POLICE/CONTENU */
+      color: #4D5967;
+    /* ANIMATIONS/EFFETS */
+      transform: scaleY(0.5);
+    /* AUTRES */  
+  }
+
+  .msn-messenger-avatar .container .expand {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: absolute;
+      top: 4px;
+      right: -9px;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */  
+  }
+/* 5 <- Avatar */
+
+
+
+/* 6 -> cadre de chat */
+  .msn-messenger-local-user>.container { 
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */  
+      display: grid;
+    /* TAILLE */
+      width: 100%;
+      height: 100%;
+
+      grid-template-columns: 1fr 140px;
+    /* MARGE INT./EXT. */
+      margin: 4px 8px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .msn-messenger-chat>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */ display: grid;
+    /* TAILLE */
+      min-height: 122px;
+      width: 97%;
+    
+      grid-template-rows: 24px 1fr 24px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: #fff;
+    /* BORDURE */
+      border: 1px solid #586170;
+      border-radius: 6px;    
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .actionbar,
+  .tabs {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: linear-gradient(#D8E8F7, #F5F2F9, #D8E8F7);
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .actionbar {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */ 
+      display: flex;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border-bottom: 1px solid #586170;
+      border-radius: 6px 6px 0 0;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .tabs {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: flex-end;    
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      padding-right: 12px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+      border-top: 1px solid #565F70;
+      border-radius: 0 0 6px 6px;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */  
+  }
+
+  .chat {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: flex-end;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      margin: 3px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .chat .buttons {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      flex-direction: column;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      gap: 3px 0;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .normal {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      width: 58px;
+      height: 37px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: #FBFBFB;
+    /* BORDURE */
+      border: 1px solid #93989C;
+      border-radius: 5px;
+    /* POLICE/CONTENU */
+      font-family: Tahoma;
+      font-weight: bold;
+      font-size: 11px;
+      color: #969C9A;
+    /* ANIMATIONS/EFFETS */
+      box-shadow: -4px -4px 4px #C0C9E0 inset;
+    /* AUTRES */
+  }
+
+  .normal span {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      text-decoration: underline;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .normal.small {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      height: 25px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .simple-button>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      align-items: center;
+    /* TAILLE */
+      height: 100%;
+    /* MARGE INT./EXT. */
+      padding: 0 6px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .simple-button>.container .container img {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      height: 16px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .container span:not(:empty) {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */ 
+      display: inline-block;
+    /* TAILLE */
+      width: 50px;
+    /* MARGE INT./EXT. */
+      padding-left: 3px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      font-family: Verdana;
+      font-size: 10px;
+      color: #444;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .container button {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      padding: 0;
+    /* ARRIERE PLAN */
+      background: transparent;
+    /* BORDURE */
+      border: 0;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+      transform: scale(0.6);
+    /* AUTRES */
+  }
+
+  .tab-button>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */    
+      display: flex;
+      justify-content: center;
+    /* TAILLE */
+      min-width: 25px;
+      height: 18px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: #EDF2F8;
+    /* BORDURE */
+      border: 1px solid #ABB0C6;
+      border-top: 0;
+      border-radius: 0 0 6px 6px;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .tabs .tab-button>.container:focus {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+      background: #fff;
+    /* BORDURE */
+      border-bottom: 3px solid #E2C47B;
+      border-top: 0;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */    
+      transform: translateY(-1px);
+    /* AUTRES */
+  }
+
+  .tab-button img {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+      width: 16px;
+      height: 16px;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+  
+  .msn-messenger-statusbar>.container {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      position: relative;
+      display: flex;
+      align-items: center;
+    /* TAILLE */
+      width: 98%;
+      height: 14px;
+    /* MARGE INT./EXT. */
+      padding-left: 8px;
+    /* ARRIERE PLAN */    
+      background: #FDFDFF;
+    /* BORDURE */
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      border-top: 1px solid #505E67;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */    
+  }
+
+  .msn-messenger-statusbar>.container .text {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      font-family: Verdana;
+      font-size: 10px;
+      font-weight: bold;
+      color: navy;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .msn-messenger-statusbar>.container .text a {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      color: black;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+  .msn-messenger-statusbar>.container .text a:hover {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      color: darkred;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+
+
+
+
+
+
+  .shake {
+    animation: shake 1.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
