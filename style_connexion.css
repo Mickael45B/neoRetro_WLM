@@ -1,0 +1,855 @@
+
+:root{
+    --font-color: #12368D;
+    --link-color: #0002FD;
+    --border-color: #8398BD;
+    --border-color-dark: #4C6D9E;
+}
+/* TOUTES LES INSTRUCTION DE CETTE PAGE SUIVENT CET ORDRE DE CLASSEMENT : */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+/* PARTIE 01 ==> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- CADRE ==> */
+    .P1_app {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: 280px;
+        /* MARGE INT./EXT. */
+            margin: 28vh auto;
+        /* ARRIERE PLAN */
+            background-color: #fff;
+        /* BORDURE */
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        /* POLICE / CONTENU */
+            color: var(--font-color);
+            font-family: sans-serif;
+            font-size: 11px;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+/* <== PARTIE 01 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- <== CADRE */
+
+/* PARTIE 02 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- EN-TETE ==> */
+    .P1_app__title { /* general */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin-bottom: 2em; 
+            padding: 0 3px 0 3px;
+        /* ARRIERE PLAN */
+            background: white linear-gradient(to bottom, #C0D4E9, #ECF0F4, #F8F8F8);
+        /* BORDURE */
+            border: 1px solid white;
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        /* POLICE / CONTENU */
+            text-align: left;
+            font-weight: bolder;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__icon__expand { /* reduire / agrandir */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: inline-block;
+            position: relative;
+            top: 0;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 1px;
+        /* ARRIERE PLAN */ 
+            background: white linear-gradient(200deg, white 25%, #B1C9E2 75%, #9DB2D7 );
+        /* BORDURE */
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+        /* POLICE / CONTENU */
+            font-family: monospace;
+            font-size: 9px;
+            font-weight: bolder;
+        /* ANIMATIONS / EFFETS */
+            transform: rotate(-90deg);
+        /* AUTRES */        
+    }
+    .P1_app__title--logo { /* logo MSN */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: relative;
+            top: 3px;
+        /* TAILLE */
+            width: 36px;
+            height: auto;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+/* <== PARTIE 02 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- <== EN-TETE */
+
+/* PARTIE 03 ==> ------------------------------------------------------------------------------------------------------------------------------------------------------------ CADRE DE CONNEXION ==> */
+    .P1_app__frame { /* cadre */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: relative;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 5px;
+        /* ARRIERE PLAN */
+            background: white linear-gradient(to bottom, white, #EEF2F6, #DFE7EF, #CADAEB, #DFE7EF, #EEF2F6, white);
+        /* BORDURE */
+        /* POLICE / CONTENU */ 
+            text-align: center;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }	
+    .P1_app__frame--bg { /* arriere-plan ==> plus utilise */
+        /* Z-INDEX */
+            z-index: 1;
+        /* POSITION / AFFCHAGE */
+            position: absolute; 
+            bottom: 1em; 
+            right: 0.25em;
+        /* TAILLE */
+            width: 150px;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+            opacity: 0.15;
+        /* AUTRES */
+    }
+    .P1_app__profile--image { /* avatar (image) */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: 98px;
+            height: auto;
+        /* MARGE INT./EXT. */
+            margin: auto;
+            margin-bottom: 0.75em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-radius: 10px;
+            border: 1px solid var(--border-color-dark);
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login label {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            line-height: 1.5;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login-inner { /* bloc de connexion */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 0 4em;
+            margin: auto;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            text-align: left;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app label,
+    .P1_app select {/* intitule des zones a remplir */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: block;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: auto;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app input { /* zone de saisie */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border: 1px solid var(--border-color);
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login-inner--select {/* liste deroulante (status et langue) --general-- */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin-bottom: 1.5em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login-inner--select select,
+    .P1_app__login-inner--select label {/* liste deroulante (status et langue) --texte et zone de saisie-- */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: inline-block;
+            vertical-align: bottom;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #blocSaisieMail {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 3px 5px;
+            margin-bottom: 1em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }   
+    .P1_app__login--pass {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 3px 5px;
+            margin-bottom: 1em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }	
+    .P1_app__login--pass:active {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background: transparent;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login--status { /* status a afficher a la connexion */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background: none;
+        /* BORDURE */
+            border: 1px solid transparent;
+        /* POLICE / CONTENU */
+            color: var(--font-color);
+            font-size: inherit;
+            font-family: inherit;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }		
+    .P1_app__login--status:focus {/* lorsqu'on est en train de choisir le status */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */ 
+            background: white;
+        /* BORDURE */
+            outline: none; 
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            box-shadow: -1px -2px 3px 0 rgba(0,0,0,0.5);
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #bocDeGlypsDeSecurite{
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            flex-direction:row;
+            justify-content:space-between;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+     }       
+    a.iconeSecu{
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: block;
+        /* TAILLE */
+            height: 16px;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }            
+    .P1_app__login-link {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: block;
+            text-align: left;
+        /* TAILLE */
+            line-height: 1.75;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            color: var(--link-color);
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login-link--container {
+        /* Z-INDEX */
+            z-index: 2;
+        /* POSITION / AFFCHAGE */
+            position: relative;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding-left: 2em;
+            padding-right: 2em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__login-link--service-status {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: inline-block;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            text-decoration: none;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+    }
+    .P1_app__login-link--new-account { /* class non utilisee */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: inline-block;
+            /*float: right;*/
+            clear: both;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+
+
+        
+    }
+        .P1_app__login-button { /* validation des choix de connexion */
+        /* Z-INDEX */ 
+            z-index: 3;
+        /* POSITION / AFFCHAGE */
+            display: block;
+            position: relative;
+        /* TAILLE */
+            line-height: 1.5;
+        /* MARGE INT./EXT. */
+            padding: 0.25em 1.5em;
+            margin: auto;
+            margin-top: 2em;
+            margin-bottom: 3em;
+        /* ARRIERE PLAN */
+            background: white linear-gradient(to bottom, white, #D9E1FA);
+        /* BORDURE */
+            border: 1px solid #064381; 
+            border-radius: 3px;
+            box-shadow:
+                inset -1px -2px 0 0 orange,
+                inset 1px 1px 0 0 orange,
+                -2px -1px 3px 0 rgba(0,0,0,0.35);
+        /* POLICE / CONTENU */
+            color: #064381;
+            font-weight: bold;
+            font-family: "MS Reference Sans Serif", "Arial";
+            font-size: 11px;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+            cursor: pointer;
+    }
+/* <== PARTIE 03 ------------------------------------------------------------------------------------------------------------------------------------------------------------ <== CADRE DE CONNEXION */
+
+/* PARTIE 04 ==> ------------------------------------------------------------------------------------------------------------------------------------------------------------------ PIED DE PAGE ==> */
+    .app__footer {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            text-align: left;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin-top: 4em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P1_app__footer--credits {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .app__input--text { /* class non utilisee */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: 100%;
+        /* MARGE INT./EXT. */
+            margin-bottom: 0.75em;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+/* <== PARTIE 04 ------------------------------------------------------------------------------------------------------------------------------------------------------------------ <== PIED DE PAGE */
+ 
+/* PARTIE 05 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------- NOTIFICATION DE CONNEXION ==> */
+
+
+
+
+
+
+
+
+
+
+
+
+/* <== PARTIE 05 ----------------------------------------------------------------------------------------------------------------------------------------------------- <== NOTIFICATION DE CONNEXION */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+
+
+
+
+/* glasomorphisme zone de saisie */
+#saisiePseudo{
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */ 
+            background-color: transparent;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+}
+
+#saisiePseudo:focus {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        border:1px solid var(--border-color);
+}
+.P1_app__login--pseudo {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #saisiePseudo {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        height: 16.5px;
+    width: 128px;
+
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--font-color);
+    font-size: 16px;
+  }
+
+  ::placeholder {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        color: #fff;
+    opacity: 0.7;
+  }
+/* glasomorphisme zone de saisie */
+
+
+/* case a cocher ===> revoir les positions <=== */
+
+  .P1_app__login-inner--checkbox {
+    /* case à cocher -- position -- */
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  
+  .P1_app__login-inner--checkbox input[type="checkbox"] {
+    /*-webkit-appearance: none;*/
+    background: white linear-gradient(125deg, #DBDBDB, white 75%);
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    position: relative;
+    top: 4px;
+  }
+  
+  .P1_app__login-inner--checkbox input[type="checkbox"]:checked + label {
+    
+    background-color: #e9ecee;
+    border: 1px solid var(--border-color);
+    color: #333;
+  }
+  
+  .P1_app__login-inner--checkbox input[type="checkbox"]:checked + label::after {
+    content: '\2714';
+  font-size: 10px;
+  position: absolute;
+  left: 70px;
+    font-weight: bolder;
+  color: #43ae43; 
+    background-color: red;
+  }
+/* case a cocher ===> revoir les positions <=== */
+    
+
+
+
+
+
+  
+
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+
+
+
+
+
+
+
+
+
+.P1_app__notification {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        display: none;
+position: absolute;
+z-index: 5;
+bottom: 0;
+right: 18px;
+width: 180px;
+padding: 1px;
+background: white;
+border: 1px solid #A6B4CF;
+border-right-color: #455690;
+border-bottom-color: #455690;
+box-shadow:
+    inset 1px 1px 0 0 white,
+    inset -1px -1px 0 0 #CFDEF4;
+color: var(--font-color);
+font-family: sans-serif;
+font-size: 11px;
+
+animation: notification-pop-up 0.5s ease-in forwards;
+}
+
+
+@keyframes notification-pop-up {
+    0% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.P1_notification-username{
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        font-weight: bold;
+font-size: 15px;
+}
+
+
+
+.P1_app__notification__close {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        cursor: pointer;
+    background: #E6440D linear-gradient(160deg, rgba(255,255,255,0.5), #E6440D);
+    color: white;
+    position: absolute;
+    right: 0;
+    font-weight: bolder;
+    font-size: 9px;
+    line-height: 1;
+    border: 1px solid transparent;
+        border-bottom-color: #C23D1B;
+        border-right-color: #C64423;
+        border-left-color: #E35F3E;
+        border-top-color: #E66D50;
+    margin: 3px 4px;
+    padding: 2px 3px;
+        font-family: monospace;
+        border: 1px solid white;
+        border-radius: 1px;
+}
+
+.P1_app__notification__title {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        color: var(--font-color);
+    line-height: 2;
+        padding-left: 4px;
+        padding-right: 4px;
+    background: white linear-gradient(to bottom, #CFD7EC, white 40%, #CADAF3 90%);
+}	
+    .P1_app__notification__title--icon {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        width: 13px;
+        height: auto;
+        position: relative;
+        top: 2px;
+    }
+
+
+.P1_app__notification__inner {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        border: 1px solid #728EB8;
+        border-bottom-color: #B9C9EF;
+        border-right-color: #B9C9EF;
+    background: white linear-gradient(to bottom, #CFDDF4, white 17%, #D5E1F5, #EBF0FA);
+        height: 100px;
+    
+        margin-right: 3px;
+        text-align: right;
+    }	
+        .P1_app__notification__inner--logo img {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        width: 41px;
+            height: auto;
+        }
+    
+
+
+.P1_app__notification__local-menu {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        text-align: center;
+    padding: 2px 3px;margin: 7px;
+}
+
+.P1_app__notification__user {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        padding: 0 8px;
+    margin-bottom: 5px;height: 80px;
+}	
+    .P1_app__notification__user--photo {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+        display: inline-block;
+        width: 50px;
+        height: auto;
+        margin-right: 18px;
+        margin-top: 23px;
+        border-radius: 10px;
+        border: 1px solid #4E6BA0;
+    }
+    
+    .P1_app__notification__user--details {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        position: relative;
+        top: 25%;
+        display: inline-block;
+        text-align: center;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
