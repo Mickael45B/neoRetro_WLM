@@ -1,0 +1,40 @@
+{
+    "utilisateur": {
+        "2": {
+            "destinataire": {
+                "4": {
+                    "contenu": {
+                        "tableauTimestamp": ["1704659982273", "1704659992641", "1704661143870", "1704663072727"],
+                        "typeDuMessage": ["text", "text", "text", "text"],
+                        "tableauMessage": ["coucou", "coucou", "je teste", "ceci est un test pour voir si ça marche"]
+                    }
+                },
+                "5": {
+                    "contenu": {
+                        "tableauTimestamp": ["1704659982273", "1704659992641", "1704661143870", "1704663072727"],
+                        "typeDuMessage": ["text", "text", "text", "text"],
+                        "tableauMessage": ["coucou", "coucou", "je teste", "ceci est un test pour voir si ça marche"]
+                    }
+                }
+            }
+        },
+        "4": {
+            "destinataire": {
+                "2": {
+                    "contenu": {
+                        "tableauTimestamp": ["1704659982473", "1704659992541", "1704661143770", "1704663072627"],
+                        "typeDuMessage": ["text", "text", "text", "text"],
+                        "tableauMessage": ["coucou", "coucou", "je teste", "ceci est un test pour voir si ça marche"]
+                    }
+                },
+                "5": {
+                    "contenu": {
+                        "tableauTimestamp": ["1704659982273", "1704659992641", "1704661143870", "1704663072727"],
+                        "typeDuMessage": ["text", "text", "text", "text"],
+                        "tableauMessage": ["coucou", "coucou", "je teste", "ceci est un test pour voir si ça marche"]
+                    }
+                }
+            }
+        }
+    }
+}
