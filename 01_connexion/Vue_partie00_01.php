@@ -266,11 +266,11 @@
 
                   <div id="messageInfoConnexion" class="" data-vide="" value="" name="">
                   </div>
-                  <button id="P1_app__login-button" class="P1_app__login-button" data-vide="" value="" name="" type="submit">Bienvenue</button>
+                  <button id="P1_app__login-button" class="P1_app__login-button1 centre_centre" data-vide="" value="" name="" type="submit" ><span style="width: 60px;"> Bienvenue</span></button>
                 </div>
               </div>
 
-              <div id="P1_piedDePartie" class="P1_app__section P1_app__footer" data-vide="" value="" name="">
+              <div id="P1_piedDePartie" class="P1_Saisie P1_app__section P1_app__footer" data-vide="" value="" name="">
                 <p id="" class="P1_app__footer--credits" data-vide="" value="" name="">Mentions Légales </p> 
               </div>
             </div>
