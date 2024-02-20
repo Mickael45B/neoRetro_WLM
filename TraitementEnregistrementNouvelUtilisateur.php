@@ -1,5 +1,15 @@
 <?php 	
 		include 'conectBDD.php'; 
+/*
+        PseudoConnu
+        MDPCorrect
+        saisiePseudo
+        saisieMail
+        saisieMail
+        listDeroulStatut
+        listDeroulLang
+        bocDeGlypsDeSecurite => correct
+*/
 
 $sasieSecupseudo=strip_tags($_POST['enregistrerPseudo']);
 $sasieSecumail=strip_tags($_POST['enregistrerMail']);
