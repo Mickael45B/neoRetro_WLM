@@ -1,0 +1,681 @@
+/* TOUTES LES INSTRUCTION DE CETTE PAGE SUIVENT CET ORDRE DE CLASSEMENT : */
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+
+    a {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            color: #0088e4;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_main {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex; 
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            overflow:hidden;
+        /* TAILLE */ 
+            height: auto;
+            min-height: 306px;
+        /* MARGE INT./EXT. */ 
+            padding: 10px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            justify-content: center;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_mainwindow {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */ 
+            background-color: #ECF6F9;
+        /* BORDURE */
+            border: thin solid #707070;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #00000050;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_aerobutton {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: auto;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */ 
+            background-color: transparent;
+        /* BORDURE */
+            border: 2px solid transparent;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_aerobutton:hover {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-image: url("../../bibliotheque/02_listedeconnectes/icones/aerobutton_border.png") 2 round;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_aerobutton:active {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-image: url("../../bibliotheque/02_listedeconnectes/icones/aerobutton_border_down.png") 2 round;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_emoticon {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0 3px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .smallarrowbtn {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            align-items: center;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_arrowdown {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 5px;
+        /* MARGE INT./EXT. */
+            margin-left: 4px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .alerts {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            align-items: center;
+        /* TAILLE */ 
+            height: 19px;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background-color: white;
+        /* BORDURE */
+            border: thin solid #bed6e0;
+            border-bottom: none;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .alerttext {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0; 
+            margin-left: 3px; 
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_contacts {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: relative;
+            float: left;
+        /* TAILLE */
+            width: 30%;
+            min-width: 274px;
+            height: 100%;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */ 
+            background-color: white;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_contacts .P2_header {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 95px;
+            width: 100%;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background-image: url("../../bibliotheque/02_listedeconnectes/frames/msgres_fullheader2.png");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_titlebar {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            flex-direction: row;
+        /* TAILLE */
+            height: fit-content;
+            height: 28px;
+        /* MARGE INT./EXT. */
+            padding: 6px;
+            padding-bottom: 5px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_title {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 10px;
+        /* MARGE INT./EXT. */
+            margin-top: 4px;
+            margin-left: 4px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_user-info {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex; 
+            box-sizing: border-box;
+        /* TAILLE */
+            height: 69px;
+            width: 100%;
+        /* MARGE INT./EXT. */
+            padding: 8px 14px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_frame {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: absolute;
+            top: 31px;
+            left: 9px;
+        /* TAILLE */
+            height: 62px;
+            width: auto;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_avatar {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: absolute;
+            top: 36px;
+            left: 14px;        
+        /* TAILLE */
+            height: 48px;
+            width: auto;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-radius: 2px;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_profile {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 100%;
+        /* MARGE INT./EXT. */
+            margin: auto;
+            margin-left: 14px;
+            margin-top: 3px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_user {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex; 
+            align-items: center;
+        /* TAILLE */
+            height: fit-content;
+        /* MARGE INT./EXT. */
+            padding: 0;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            text-align: start;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_user > h3 {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            font-size: 10pt;
+            font-weight: 600;
+            color: white;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_status {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            font-size: 8pt;
+            color: #B9DDE7;
+            margin-left: 8px;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_message {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex; 
+            align-items: center;
+        /* TAILLE */
+            height: fit-content;
+        /* MARGE INT./EXT. */
+            margin: 0;
+            padding: 0;
+            padding-top: 2px;
+            padding-bottom: 3px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            text-align: start;
+            color: #B9DDE7;
+            font-size: 8pt;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_arrowcontacts {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */ 
+            margin-left: 177px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            fill: #B9DDE7 !important;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_contactsnav {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        /* TAILLE */
+            height: 31px;
+        /* MARGE INT./EXT. */
+            padding: 0;
+        /* ARRIERE PLAN */
+            background-image: url("../../bibliotheque/02_listedeconnectes/frames/msgres_navbar.png");
+            background-size:100% 100%;
+        /* BORDURE */
+            box-shadow: 0px 1px 2px #00000077;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .iconbar {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: 50%;
+            margin: 0;
+        /* MARGE INT./EXT. */
+            padding: 3px 8px 2px 8px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            list-style: none;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_left .P2_contactaction {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            float: left; 
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_right .P2_contactaction {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            float: right;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_contactaction {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 25px;
+            width: 28px;
+        /* MARGE INT./EXT. */
+            margin: -12px 8px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+            /*marker: none;*/            
+    }
+    .P2_search {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        /* TAILLE */ 
+            height: 38px;
+        /* MARGE INT./EXT. */
+            padding: 8px 8px 8px 7px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-bottom: thin solid #e2eaf3;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_contact-search {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 10px;
+            width: 100%;
+        /* MARGE INT./EXT. */
+            padding: 8px;
+            margin-right: 7px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border: thin solid #c7c7c7;
+            box-shadow: inset 0 0 3px #0000002a;
+        /* POLICE / CONTENU */
+            font-size: 8pt;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_contact-search:focus {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border: thin solid #52c9fd;
+            box-shadow: 0 0 6px #52cafdbe;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_searchbar-btn {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            height: 23px;
+            width: 22px;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border: 2px solid transparent;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_searchbar-btn:hover {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-image: url("../bibliotheque/02_listedeconnectes/icones/button_border.png") 2 round;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_searchbar-btn:active {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+            border-image: url("../bibliotheque/02_listedeconnectes/icones/button_border_down.png") 2 round;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_listitem {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            overflow: hidden;
+        /* TAILLE */
+            height: 19px;
+            width: 100%;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background-color: white;
+        /* BORDURE */
+            border: none;
+        /* POLICE / CONTENU */
+            text-overflow: ellipsis;
+            font-size: 8pt;
+            text-align: start;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_listitem:focus {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+            background-color: #1c8dc5;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .arrow {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+            width: 9px;
+            height: 9px;
+        /* MARGE INT./EXT. */ 
+            margin-right: 2px;
+        /* ARRIERE PLAN */
+            background: url("../bibliotheque/02_listedeconnectes/icones/arrows.png") 0 0;
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_contact {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding-left: 19px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_status-icon {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            box-sizing: content-box;
+        /* TAILLE */
+            height: 100%;
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_contact-text {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: inline-block;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 0;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            text-anchor: middle;
+            text-overflow: ellipsis;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    .P2_message {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            overflow: hidden;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+            white-space: nowrap;
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_footer {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            position: absolute;
+            bottom: 0;
+        /* TAILLE */
+            width: 100%;/*97*/
+        /* MARGE INT./EXT. */
+            margin: 0;
+            padding: 5px 0;
+        /* ARRIERE PLAN */
+            background-color: #ECF6F9;
+        /* BORDURE */
+            border-radius: 0 0 8px 8px;
+            border-top: thin solid #BED6E0;
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_footer span{
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            padding: 0 10px;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
+    #P2_ad {
+        /* Z-INDEX */
+        /* POSITION / AFFCHAGE */
+            display: block;
+        /* TAILLE */
+        /* MARGE INT./EXT. */
+            margin: 10px auto;
+        /* ARRIERE PLAN */
+        /* BORDURE */
+        /* POLICE / CONTENU */
+        /* ANIMATIONS / EFFETS */
+        /* AUTRES */
+    }
