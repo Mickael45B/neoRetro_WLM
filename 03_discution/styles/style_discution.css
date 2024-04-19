@@ -1,0 +1,1086 @@
+/*
+- Nom du fichier : style_discution.css
+- Type : style
+- Language(s) : CSS
+
+*/
+
+/* TOUTES LES INSTRUCTION DE CETTE PAGE SUIVENT CET ORDRE DE CLASSEMENT : */
+/* Z-INDEX */
+/* POSITION/AFFCHAGE */
+/* TAILLE */
+/* MARGE INT./EXT. */
+/* ARRIERE PLAN */
+/* BORDURE */
+/* POLICE/CONTENU */
+/* ANIMATIONS/EFFETS */
+/* AUTRES */
+
+/* PARTIE 01 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- GENERAL ==> */
+  :root{ /* variable pour utilisation dans ce document */
+    --borderRadius: 6px;
+    --font-color: #12368D;
+    --link-color: #0002FD;
+    --border-color: #8398BD;
+    --border-color-dark: #4C6D9E;
+    --largeurResolution:2560;
+    --hauteurResolution:1539;
+
+    --multiplicateurLargeur: calc(var(--largueur_fenetre)/var(--largeurResolution));
+    --multiplicateurHauteur: calc(var(--hauteur_fenetre)/var(--hauteurResolution));
+
+    --laGrille1: 0; /* Initialisez la variable à une valeur par défaut si nécessaire */
+    --largeurImage:0;
+  }
+  @media (max-width: 500px) {/* EXCEPTIONS */
+    .P3_image-button .P3_container a .P3_text {
+      display: none; /* Masquer le contenu lorsque la largeur est inférieure à 500px */
+    }
+    #contenerAvatarDestinataire, #contenerAvatarUtilisateur{
+    display: none; /* Masquer le contenu lorsque la largeur est inférieure à 500px */
+    }
+  }
+
+  .Discution {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    /* TAILLE */
+      height: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+  .P3_containerprinc { 
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      margin: 28vh auto;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+  #P3_msn-messenger-window {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+      /*overflow: hidden;*/
+    /* AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */  
+      background: #D7E4F5;  /* arriere plan, a l'interieur du cadre */
+      background-image: /* Bordures du cadre */
+        url(../../bibliotheque/03_discution/frame/main-background.png),
+        url(../../bibliotheque/03_discution/frame/main-corner-left.png),
+        url(../../bibliotheque/03_discution/frame/main-corner-right.png),
+        url(../../bibliotheque/03_discution/frame/main-left.png),
+        url(../../bibliotheque/03_discution/frame/main-right.png),
+        url(../../bibliotheque/03_discution/frame/main-bottom.png);
+      background-repeat:  no-repeat, no-repeat, no-repeat, repeat-y, repeat-y, repeat-x;
+      background-position: right 16px bottom 16px, bottom left, bottom -1px right, bottom left, bottom right, bottom;
+    /* BORDURE */
+      border-radius:var(--borderRadius);
+      box-shadow:
+      2px 2px 5px #0009,
+      5px 5px 10px #000c;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */  
+      /*transform: translate(var(--x, 0), var(--y, 0)); */
+    /* AUTRES */
+  } 
+  #P3_shakeButton{
+      position: relative;
+
+      display: grid;
+
+      --largeurEnProgramation:2450px;/* lors du developpement, largeur utilise */
+      width:calc(var(--largeurEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */ 
+      --largeurCalculee: calc(var(--largeurEnProgramation) * var(--multiplicateurLargeur));          
+      
+      --hauteurEnProgramation:1450px;/* lors du developpement, hauteur utilise */              
+        height:calc(var(--hauteurEnProgramation) * var(--multiplicateurHauteur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+      grid-template-rows: 8% 55% 32% 5%;
+
+  }
+  .P3_container span:not(:empty) {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */ 
+      display: inline-block;
+    /* TAILLE */
+      width: 50px;
+    /* MARGE INT./EXT. */
+      padding-left: 3px;
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE/CONTENU */
+      font-family: Verdana;
+      font-size: 10px;
+      color: #444;
+    /* ANIMATIONS/EFFETS */
+    /* AUTRES */
+  }
+  .P3_container button {
+    /* Z-INDEX */
+    /* POSITION/AFFCHAGE */
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+      padding: 0;
+    /* ARRIERE PLAN */
+      background: transparent;
+    /* BORDURE */
+      border: 0;
+    /* POLICE/CONTENU */
+    /* ANIMATIONS/EFFETS */
+      transform: scale(0.6);
+    /* AUTRES */
+  }
+/* <== PARTIE 01 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- <== GENERAL */
+
+/* PARTIE 02 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- EN TETE ==> */
+  /* PARTIE 02 01 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------------- ENSEMBLE ==> */
+    .P3_msn-messenger-toolbar>.P3_container { /* ensemble barre de menu */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */ 
+        position: relative;
+        display: grid;
+      /* TAILLE */
+        width: 100%;
+        height: 100%;
+
+        --laGrille1: calc(var(--largeurCalculee) * 0.8);
+        --laGrille2: calc(var(--largeurCalculee) * 0.2);
+        grid-template-columns: var(--laGrille1) var(--laGrille2);
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */   
+    }
+    .P3_image-circular-button>.P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      /* TAILLE */
+        width: var(--size, 16px);
+        height: var(--size, 16px);
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(../../bibliotheque/03_discution/frame/small-circle-button.png) no-repeat;
+        background-size: cover;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */    
+    }
+    .P3_image-circular-button>.P3_container img {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+        width: var(--image-size, 11px);
+        height: var(--image-size, 11px);
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+  /* <== PARTIE 02 01 ----------------------------------------------------------------------------------------------------------------------------------------------------------- <== ENSEMBLE */
+
+  /* PARTIE 02 02 ==> -------------------------------------------------------------------------------------------------------------------------------------------------------- PARTIE GAUCHE ==> */
+    .P3_toolbar-container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;  
+      /* TAILLE */ 
+        grid-template-columns: repeat(6, 1fr);
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(../../bibliotheque/03_discution/frame/toolbar-background.png) repeat;
+        background-size: contain;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        justify-content: flex-end;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+      .P3_up-down {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        position: absolute;
+        top: 2px;
+        left: 2px;
+      /* TAILLE */
+        /*--image-size: 15px;*/
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_center .P3_image-circular-button {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+        /*--size: 19px;
+       --image-size: 13px;*/
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_image-button{
+      /* POSITION/AFFCHAGE */
+
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .P3_image-button .P3_container,
+    .P3_image-button .P3_container a ,
+    .P3_image-button .P3_container a .P3_text{
+      
+
+
+}
+.P3_iconeMenuPrincipal{
+      --largeurAvatarEnProgramation: 43px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurHauteur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+      height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurHauteur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+    }
+    .P3_image-button .P3_container { /* chaque icone de la barre de menu */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_image-button .P3_container a img{
+      /*min-width: 30px;*/
+
+      --largeurEnProgramation:63;/* lors du developpement, largeur utilise */
+      width:calc((var(--largueur_fenetre) * var(--largeurEnProgramation)) / var(--largeurResolution)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */             
+    }
+    .P3_image-button .P3_container .P3_text {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        font-family: Verdana;
+        font-size: 10.5px;
+        letter-spacing: -0.25px;
+        color: #434C4B;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_image-button .P3_container .P3_text span {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        text-decoration: underline;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */   
+    }
+  /* <== PARTIE 02 02 -------------------------------------------------------------------------------------------------------------------------------------------------------- <== PARTIE GAUCHE */
+
+  /* PARTIE 02 03 ==> -------------------------------------------------------------------------------------------------------------------------------------------------------- PARTIE DROITE ==> */
+    .P3_toolbar-small-container { /* ensemble de la partie droite des menus */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;
+      /* TAILLE */  
+      --unPourcentDeSection: calc(var(--laGrille2) / 100);
+      --menuDroite_partie1:calc(var(--unPourcentDeSection)*11.5);
+      --menuDroite_partie2:calc(var(--unPourcentDeSection)*38.5);
+      --menuDroite_partie3:calc(var(--unPourcentDeSection)*9.10);
+      --menuDroite_partie4:calc(var(--unPourcentDeSection)*40.9);
+        grid-template-columns: var(--menuDroite_partie1) var(--menuDroite_partie2) var(--menuDroite_partie3) var(--menuDroite_partie4);
+        height: 100%;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */   
+    }
+    .P3_toolbar-small-container .P3_left {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */ 
+        background: url(../../bibliotheque/03_discution/frame/small-toolbar-left-background.png) no-repeat;background-size: cover;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */     
+    }
+    .P3_toolbar-small-container .P3_center {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background:
+          url(../00_general/icones/fixe/logoMSN.png) top left,
+          url(../../bibliotheque/03_discution/frame/small-toolbar-center-background.png);
+        background-repeat: no-repeat, repeat-x;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_toolbar-small-container .P3_right {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(../../bibliotheque/03_discution/frame/small-toolbar-right-background.png) no-repeat;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_toolbar-small-container .P3_end {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: url(../../bibliotheque/03_discution/frame/small-toolbar-end-background.png) repeat;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_center .P3_buttons {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        gap: 0 4px;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+        transform: translate(2px, 23px);
+      /* AUTRES */
+    }
+  /* <== PARTIE 02 03 -------------------------------------------------------------------------------------------------------------------------------------------------------- <== PARTIE DROITE */
+/* <== PARTIE 02 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- <== EN TETE */
+
+/* PARTIE 03 ==> -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- CORP ==> */
+  /* PARTIE 03 01 ==> ----------------------------------------------------------------------------------------------------------------------------------------------------------- ENSEMBLE ==> */
+    .P3_msn-messenger-avatar{
+      position: relative;    
+      display: flex;
+      align-items: center;justify-content: center;
+      flex-direction: column;
+    }
+    #contenerAvatarDestinataire .P3_container {
+      /* Z-INDEX */z-index: 100;
+      /* POSITION/AFFCHAGE */
+        position: relative;    
+        display: flex;
+        align-items: center;justify-content: center;  
+        flex-direction: column;
+      /* TAILLE */
+      --largeurAvatarEnProgramation: 250px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        border: 1px solid #586170;
+        border-radius: 8px;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    #avatarDiscutionDestinataire{
+      --largeurAvatarEnProgramation: 248px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+        border-radius: 10px;
+    }
+
+    
+    #contenerAvatarUtilisateur .P3_container {
+      /* Z-INDEX */z-index: 100;
+      /* POSITION/AFFCHAGE */
+        position: relative;    
+        display: flex;
+        align-items: center;justify-content: center;  
+        flex-direction: column;
+      /* TAILLE */
+      --largeurAvatarEnProgramation: 250px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+      /* MARGE INT./EXT. */
+      border: 1px solid #586170;
+      border-radius: 8px;
+
+      /* ARRIERE PLAN */
+      /* BORDURE */
+       
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    #avatarDiscutionUtilisateur{
+      --largeurAvatarEnProgramation: 248px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+        border-radius: 8px;
+    }
+    .P3_msn-messenger-avatar .P3_container #contenerAvatarUtilisateur {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        
+      display: flex;
+      align-items: center;justify-content: center;      
+      /* TAILLE */
+     
+      /* ARRIERE PLAN *
+      /* BORDURE */
+        border: 1px solid #586170;
+        border-radius: 8px;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+        transform: translateY(4px);
+      /* AUTRES */  
+    }
+    .P3_msn-messenger-avatar .P3_container .P3_down { /* fleche bas en dessous de l'avater */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        align-self: flex-end;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: transparent;
+      /* BORDURE */
+        border: 0;
+      /* POLICE/CONTENU */
+        color: #4D5967;
+      /* ANIMATIONS/EFFETS */
+        transform: scaleY(0.5);
+      /* AUTRES */  
+    }
+    .P3_msn-messenger-avatar .P3_container .P3_expand {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        position: absolute;
+        top: 0.5px;
+        right: -4px;
+      /* TAILLE */
+      --largeurEnProgramation:8;/* lors du developpement, largeur utilise */
+      width:calc((var(--largueur_fenetre) * var(--largeurEnProgramation)) / var(--largeurResolution)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+      min-width: 4px;             
+  
+      --hauteurImgEnProgramation: 35;
+      height:calc((var(--hauteur_fenetre) * var(--hauteurImgEnProgramation)) / var(--hauteurResolution));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+      min-height: 26px;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */  
+    }
+  /* <== PARTIE 03 01 ----------------------------------------------------------------------------------------------------------------------------------------------------------- <== ENSEMBLE */
+  /* PARTIE 03 02 ==> ------------------------------------------------------------------------------------------------------------------------------------------ DESTINATAIRE / HISTORIQUE ==> */
+    .P3_msn-messenger-remote-user .P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;
+      /* TAILLE */
+        /*width: 100%*var(--largeurCadre);*/height: 99%;
+        
+        --largeurAvatarEnProgramation: 300px;
+        --largeurImage:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+          grid-template-columns: 1fr var(--largeurImage);
+
+      /* MARGE INT./EXT. */
+        margin: 4px 4px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */  
+    }
+    .P3_msn-messenger-history-chat .P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;
+        justify-content: center;
+      /* TAILLE */
+        width: 100%;
+        height: 100%;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 28px 1fr;
+      /* MARGE INT./EXT. */
+        margin: 2px 1px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        border: 1px solid #586170;
+        border-radius: 8px 8px 0 0;
+      /* POLICE/CONTENU */
+        font-family: Verdana;
+        font-size: 10px;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */    
+    }
+    .P3_msn-messenger-history-chat .P3_container .P3_subject {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+        padding-left: 6px;
+      /* ARRIERE PLAN */
+        background: #EEF0FD;
+      /* BORDURE */
+        border-radius: 8px 8px 0 0;
+        border-bottom: 1px solid #586170;
+      /* POLICE/CONTENU */
+      font-weight: bold;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+
+    }
+    .P3_msn-messenger-history-chat .P3_container .P3_subject strong {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+        padding-left: 30px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_msn-messenger-history-chat .P3_container #historiqueMess {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */width: 100%;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: #fff;
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */   
+    }
+    .P3_msn-messenger-history-chat{
+    
+    
+    
+    }
+  /* <== PARTIE 03 02 ------------------------------------------------------------------------------------------------------------------------------------------ <== DESTINATAIRE / HISTORIQUE */
+  /* PARTIE 03 03 ==> -------------------------------------------------------------------------------------------------------------------------------------------------------- UTILISATEUR ==> */
+    .P3_msn-messenger-local-user {/*general */ 
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */  
+        display: grid;
+      /* TAILLE */
+      /*width: 100%*var(--largeurCadre);*/
+      
+      --largeurAvatarEnProgramation: 300px;
+      --largeurImage:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+        grid-template-columns: 1fr var(--largeurImage);
+
+
+       /* grid-template-rows: var(--valeurARepartir_partie1) var(--valeurARepartir_partie2) var(--valeurARepartir_partie3);*/
+        grid-template-rows: 10.17% 79.66% 10.17%;
+
+      
+      /* MARGE INT./EXT. */
+        margin: 4px 4px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_actionbar,
+    .P3_tabs /* menu inferieur / menu superieur */{
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: linear-gradient(#D8E8F7, #F5F2F9, #D8E8F7);
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_tabs {/* menu superieur */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+        justify-content: flex-end;
+
+        grid-row: 3 / -1;
+        grid-column: 1 / 2;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+        padding-right: 12px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        border-top: 1px solid #565F70;
+        border-radius: 0 0 6px 6px;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */  
+    }
+    .P3_tabs .P3_tab-button .P3_container:hover {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: var(--font-color);
+      /* BORDURE */
+        border-bottom: 3px solid #E2C47B;
+        border-top: 0;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */    
+        transform: translateY(-1px);
+      /* AUTRES */
+    }
+
+    .P3_actionbar {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */ 
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+        border-bottom: 1px solid #586170;
+        border-radius: 6px 6px 0 0;
+
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .P3_tab-button img {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+
+      --largeurAvatarEnProgramation: 16px;
+      width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+
+        width: 16px;
+        height: 16px;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_tab-button>.P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */    
+        display: flex;
+        justify-content: center;
+      /* TAILLE */
+        min-width: 25px;
+        height: 18px;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: #EDF2F8;
+      /* BORDURE */
+        border: 1px solid #ABB0C6;
+        border-top: 0;
+        border-radius: 0 0 6px 6px;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .P3_simple-button .P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+        align-items: center;
+      /* TAILLE */
+        height: 100%;
+      /* MARGE INT./EXT. */
+
+      /*padding: 0 128px;*/
+
+        --largeurAvatarEnProgramation: 98;
+        padding:0 calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurLargeur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+        
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_simple-button .P3_container img {/* menu superieur */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+        --largeurAvatarEnProgramation: 40px;
+        width:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurHauteur)); /* Sert a adapter la taille en fonction de la resolution de l'ecran */
+
+        height:calc(var(--largeurAvatarEnProgramation) * var(--multiplicateurHauteur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .P3_chat {/* saisie texte */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: grid;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        grid-template-columns: 96% 4%;
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+        margin: 3px;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_chat .P3_buttons {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        display: flex;
+        flex-direction: column;justify-content: center;
+      /* TAILLE */height: 50px;
+      /* MARGE INT./EXT. */
+        gap: 3px 0;
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    #blocEnvoyerMessage{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-row: 1 / -1;
+      grid-column: 2 / -1;
+      height: 100%;width: 100%;
+
+    }
+    #contenerAvatarUtilisateur{/* avatar */
+      grid-row: 1 / -1;
+      grid-column: 2 / -1;
+      min-height: 20px;
+    }
+
+    .P3_msn-messenger-chat{/* non utilise */
+      --tets:var(--laGrille1)px;
+      width: var(--tets);
+      /*height: 272px;86*/
+      --hauteurImgEnProgramation: 277;
+      height:calc((100 * var(--hauteurImgEnProgramation)) / var(--hauteurResolution));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+    }
+    .P3_msn-messenger-chat>.P3_container {/* non utilise */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      
+        
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+        background: #fff;
+      /* BORDURE */
+        border: 1px solid #586170;
+        border-radius: 6px;    
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+
+    .P3_buttons2{/* boutton "envoyer" */
+      transform: rotate(0.25turn);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    
+    /*.P3_normal {/* boutton "envoyer" */
+    #envoyerMessage {/* boutton "envoyer" */
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* TAILLE */
+      /* MARGE INT./EXT. */padding: 10px;
+      /* ARRIERE PLAN */
+        background: #FBFBFB;
+      /* BORDURE */
+        border: 1px solid #93989C;
+        border-radius: 5px;
+      /* POLICE/CONTENU */
+        font-family: Tahoma;
+        font-weight: bold;
+        font-size: 40px;
+
+        --taillePolice: 50px;
+        font-size:calc(var(--taillePolice) * var(--multiplicateurHauteur));/* Sert a adapter la taille en fonction de la resolution de l'ecran */
+          color: #969C9A;
+      /* ANIMATIONS/EFFETS */transform: rotate(1turn);
+        box-shadow: -4px -4px 4px #C0C9E0 inset;
+      /* AUTRES */
+    }
+    .P3_normal span {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        text-decoration: underline;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_normal.P3_small {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+        height: 25px;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    #classmessageAEnvoye{/* saisie texte */
+      width: 100%;height: 98%;
+    }
+
+  /* <== PARTIE 03 03 ----------------------------------------------------------------------------------------------------------------------------------------------------------- <== ENSEMBLE */
+/* <== PARTIE 03 ----------------------------------------------------------------------------------------------------------------------------------------------------- <== DESTINATAIRE / HISTORIQUE */
+/* PARTIE 04 ==> ------------------------------------------------------------------------------------------------------------------------------------------------------------------ PIED DE PAGE ==> */
+    .P3_msn-messenger-statusbar>.P3_container {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+        position: relative;
+        display: flex;
+        align-items: center;
+      /* TAILLE */
+        width: 100%;
+        height: 100%;
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */    
+        background: transparent;
+      /* BORDURE */
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        border-top: 1px solid #505E67;
+      /* POLICE/CONTENU */
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */    
+    }
+    .P3_msn-messenger-statusbar>.P3_container .P3_text {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        font-family: Verdana;
+        font-size: 10px;
+        font-weight: bold;
+        color: navy;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_msn-messenger-statusbar>.P3_container .P3_text a {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        color: black;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+    .P3_msn-messenger-statusbar>.P3_container .P3_text a:hover {
+      /* Z-INDEX */
+      /* POSITION/AFFCHAGE */
+      /* TAILLE */
+      /* MARGE INT./EXT. */
+      /* ARRIERE PLAN */
+      /* BORDURE */
+      /* POLICE/CONTENU */
+        color: darkred;
+      /* ANIMATIONS/EFFETS */
+      /* AUTRES */
+    }
+/* <== PARTIE 04 ------------------------------------------------------------------------------------------------------------------------------------------------------------------ <== PIED DE PAGE */
+
+/* PARTIE 05 ==> -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- TEST ==> */
+  .blue-text {
+    color: blue;
+  }
+
+  .green-text {
+    color: green;
+  }
+
+#messageHistory{
+  height: 100%;
+}
+  .bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    max-height: 250px; /* Ajustez la hauteur maximale selon vos besoins */
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  }
+
+  .header,.headers {
+    display: flex;
+    align-items: center;
+    height: 30px;
+  }
+
+  #searchInput, #searchInput>button{
+    height: 25px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .shake{
+    animation: wizzerDestinataire 1.5s reverse;
+  }
+
+  @keyframes wizzerDestinataire {
+    0%{
+      scale: 0.5;
+    }
+    100%{
+      scale: 1;
+    }
+  }  
+
+  .grida{
+    display: grid;
+    grid-template-columns: repeat(8, 20px);
+    grid-template-rows: repeat(3, 20px);
+    gap: 5px;
+  }
+
+  .bubble-container,.bubbles-containers {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px;
+      max-height: 300px;
+      overflow-y: auto;
+  }
+  .bubbles-containers{
+    display: flex;
+    align-items:center;
+  }
+  #uploadForm{
+    display: flex;
+    align-items: center;
+  }
+  .emojiResultat {
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+      cursor: pointer;
+  }
+
+  .emoji-cell{
+    width: 20px;
+      height: 20px;
+  }
+/* <== PARTIE 05 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- <== TEST */
