@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mongodb/mongodb": "^1.17",
+        "symfony/polyfill-php80": "^1.29",
+        "pear/pear_exception": "^1.0"
+    }
+}

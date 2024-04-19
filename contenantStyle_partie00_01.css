@@ -1,0 +1,199 @@
+/*  PARTIE RESPONSIVE  */
+
+#P1_CadreExterieur{
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+/* TAILLE */
+        --largrurEnDev: 2500px;
+        --hauteurEnDev: 1450px;
+       
+        width: calc(var(--largrurEnDev) * var(--RATIO_ResponsiveLargeur));
+        height: calc(var(--hauteurEnDev) * var(--RATIO_ResponsiveHauteur)); 
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+} 
+#P1_Cadreinterieur {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+        display: grid;
+        grid-template-rows: 5% 95%;
+    /* TAILLE */
+        height: 100%;
+        width: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}
+#P1_enTete { 
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    justify-content: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+        /*margin-bottom: 2em; */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}
+#P1_cadreCorpConnexion { /* cadre */
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+        display: grid;
+        grid-template-rows: 25% 72% 3%;
+        position: relative;
+    /* TAILLE */
+        height: 100%;
+    /* MARGE INT./EXT. */
+        padding: 5px;
+    /* ARRIERE PLAN */
+        background: white linear-gradient(to bottom, white, #EEF2F6, #DFE7EF, #CADAEB, #DFE7EF, #EEF2F6, white);
+    /* BORDURE */
+    /* POLICE / CONTENU */ 
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}
+#P1_cadreInterieurZoneSaisie { /* bloc de connexion */
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(7, 55px);
+    /* TAILLE */
+        height: 100%;
+        width: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}
+.P1_app__notification {
+    /* Z-INDEX */z-index: 999999;
+    /* POSITION / AFFCHAGE */
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 18px;
+    /* TAILLE */
+        width: 180px;
+    /* MARGE INT./EXT. */
+        padding: 1px;
+    /* ARRIERE PLAN */
+        background: white;
+    /* BORDURE */
+        border: 1px solid #A6B4CF;
+        border-right-color: #455690;
+        border-bottom-color: #455690;
+        box-shadow:
+            inset 1px 1px 0 0 white,
+            inset -1px -1px 0 0 #CFDEF4;
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+        animation: notification-pop-up 2.5s ease-in forwards;
+    /* AUTRES */
+}
+.P1_app__notification__title {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+    /* TAILLE */
+        line-height: 2;
+    /* MARGE INT./EXT. */
+        padding-left: 4px;
+        padding-right: 4px;
+    /* ARRIERE PLAN */
+        background: white linear-gradient(to bottom, #CFD7EC, white 40%, #CADAF3 90%);
+    /* BORDURE */
+    /* POLICE / CONTENU */ 
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}	
+.P1_app__notification__inner {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */ 
+    display: grid;
+    grid-template-rows: 80% 20%;  
+        text-align: right;
+    /* TAILLE */ height: 100px;
+    /* MARGE INT./EXT. */ 
+        margin-right: 3px;
+    /* ARRIERE PLAN */
+        background: white linear-gradient(to bottom, #CFDDF4, white 17%, #D5E1F5, #EBF0FA);
+    /* BORDURE */
+        border: 1px solid #728EB8;
+        border-bottom-color: #B9C9EF;
+        border-right-color: #B9C9EF;
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}	
+.P1_app__notification__user {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+    display: grid;
+    grid-template-columns: 33% 67%;
+    /* TAILLE */
+        height: 100%;
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}	
+#P1_app__notification__user--photo {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    /* TAILLE */
+        width: 100%;
+        height: auto;
+    /* MARGE INT./EXT. */
+        
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+    
+}
+.P1_app__notification__user--details {
+    /* Z-INDEX */
+    /* POSITION / AFFCHAGE */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    /* TAILLE */
+    /* MARGE INT./EXT. */
+    /* ARRIERE PLAN */
+    /* BORDURE */
+    /* POLICE / CONTENU */
+    /* ANIMATIONS / EFFETS */
+    /* AUTRES */
+}
+@keyframes notification-pop-up {
+    0% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}

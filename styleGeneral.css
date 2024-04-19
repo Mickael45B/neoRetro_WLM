@@ -1,0 +1,45 @@
+    :root{
+
+      --largrurEnDev: 2500px;
+      --hauteurEnDev: 1450px;    
+  
+      --RATIO_ResponsiveLargeur:calc(var(--largueur_fenetre) / 2560);/* utilise pour le responsive : propostionalite des elements */
+      --RATIO_ResponsiveHauteur:calc(var(--hauteur_fenetre) / 1500);/* utilise pour le responsive : propostionalite des elements */
+      --font-color: #12368D;
+      --link-color: #0002FD;
+      --border-color: #8398BD;
+      --border-color-dark: #4C6D9E;
+      }
+    body {
+      background: url(00_general/fondEcran/labyrintheBrique.jpg);
+      margin: 0;
+      height: 100vh; /* Utiliser 100vh pour prendre la hauteur complète de l'écran */
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #P0_logoDeDemarageButton{
+        height:100px;
+    }
+
+    #messageInfoConnexion{
+    height: 40px;
+    }
+    
+    .centre_centre{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .centre_spaceb{
+      display: flex;
+      align-items: center;
+      /*justify-content: space-around;*/
+      justify-content: center;
+
+    }
+  
+  
