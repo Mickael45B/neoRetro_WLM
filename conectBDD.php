@@ -10,7 +10,7 @@ if ($_SERVER['REMOTE_ADDR']=="127.0.0.1" || $_SERVER['REMOTE_ADDR']=="::1")
 
 		try
 			{	
-				$bdd = new PDO("mysql:host=localhost;dbname=forum", "***", "***"); // modifiez les "***" selon votre cas
+				$bdd = new PDO("mysql:host=localhost;dbname=forum; charset=utf8", "root", "");
 				$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 			catch(Exception $e)	{die($erreur_sql='Erreur connect bd: '.$e->getMessage());}
@@ -29,5 +29,6 @@ else
 	}
 // ---------- fin de connection a la base de donnees ----------
 
+// Connexion à la base de données
 
 ?>
