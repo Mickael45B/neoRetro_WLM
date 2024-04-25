@@ -9,7 +9,7 @@ $finValiditeToken=htmlspecialchars($_POST['dateActuellePlusUn']);//recupere le P
 //$date_heureDemande=htmlspecialchars($_POST['D_H_Demande']);
 
 $mailPourDev="toto@gmail.com";
-$clefMessagerie= 'azertyuiop';
+$clefMessagerie= '';
 
 
 use PHPMailer\PHPMailer\PHPMailer;
