@@ -354,7 +354,7 @@
         function renvoyerMailNormal($pseudoutilisateur, $pseudo, $codeValidationReenvoiMail){
             //Etape 01 : autres donnees de replisage du mail
                 $mailPourDev="michaloiret@gmail.com";
-                $clefMessagerie= 'nyjtqmeikgrnzzod';
+                $clefMessagerie= 'azertyuiop';
                 include 'conectBDD.php'; //connection a la BDD
 
                 //$adressemail=$resultat['mail'];// Decommenter cette ligne, et commenter celle du dessous, quand le  site sera actif    
